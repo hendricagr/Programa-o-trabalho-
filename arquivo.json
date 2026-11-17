@@ -1,0 +1,117 @@
+{
+  "pergunta": "Esse país fica no continente americano?",
+  "sim": {
+    "pergunta": "Fica na América do Sul?",
+    "sim": {
+      "pergunta": "O idioma oficial é o português?",
+      "sim": {
+        "personagem": "Brasil"
+      },
+      "nao": {
+        "pergunta": "Tem saída para o Oceano Pacífico?",
+        "sim": {
+          "pergunta": "É um país muito estreito e comprido?",
+          "sim": {
+            "personagem": "Chile"
+          },
+          "nao": {
+            "personagem": "Peru"
+          }
+        },
+        "nao": {
+          "personagem": "Argentina"
+        }
+      }
+    },
+    "nao": {
+      "pergunta": "O idioma principal é o inglês?",
+      "sim": {
+        "pergunta": "Tem uma folha de bordo vermelha na bandeira?",
+        "sim": {
+          "personagem": "Canadá"
+        },
+        "nao": {
+          "personagem": "Estados Unidos"
+        }
+      },
+      "nao": {
+        "personagem": "México"
+      }
+    }
+  },
+  "nao": {
+    "pergunta": "Fica na Europa?",
+    "sim": {
+      "pergunta": "Fica na Península Ibérica?",
+      "sim": {
+        "pergunta": "O idioma oficial é o português?",
+        "sim": {
+          "personagem": "Portugal"
+        },
+        "nao": {
+          "personagem": "Espanha"
+        }
+      },
+      "nao": {
+        "pergunta": "É uma ilha (ou arquipélago)?",
+        "sim": {
+          "personagem": "Reino Unido"
+        },
+        "nao": {
+          "pergunta": "Tem formato parecido com uma bota no mapa?",
+          "sim": {
+            "personagem": "Itália"
+          },
+          "nao": {
+            "pergunta": "É famoso pela Torre Eiffel?",
+            "sim": {
+              "personagem": "França"
+            },
+            "nao": {
+              "personagem": "Alemanha"
+            }
+          }
+        }
+      }
+    },
+    "nao": {
+      "pergunta": "Fica na Ásia?",
+      "sim": {
+        "pergunta": "Fica no Leste Asiático (região de Japão, China e Coreias)?",
+        "sim": {
+          "pergunta": "É um arquipélago (conjunto de ilhas)?",
+          "sim": {
+            "personagem": "Japão"
+          },
+          "nao": {
+            "pergunta": "É o país mais populoso dessa região?",
+            "sim": {
+              "personagem": "China"
+            },
+            "nao": {
+              "personagem": "Coreia do Sul"
+            }
+          }
+        },
+        "nao": {
+          "personagem": "Índia"
+        }
+      },
+      "nao": {
+        "pergunta": "Fica no continente africano?",
+        "sim": {
+          "pergunta": "Fica no norte da África e é famoso pelas pirâmides?",
+          "sim": {
+            "personagem": "Egito"
+          },
+          "nao": {
+            "personagem": "África do Sul"
+          }
+        },
+        "nao": {
+          "personagem": "Austrália"
+        }
+      }
+    }
+  }
+}
