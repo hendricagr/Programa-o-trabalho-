@@ -1,6 +1,4 @@
-
 let paisesRestantes = paises.slice();
-
 let perguntas = [
     {
         texto: "O país fica na América do Sul?",
@@ -63,10 +61,7 @@ let perguntas = [
         valor: true
     }
 ];
-
-// Cria perguntas adicionais com base na primeira letra das capitais
 let letras = [];
-
 for (let i = 0; i < paises.length; i++) {
     let letra = paises[i].capital.charAt(0).toUpperCase();
 
@@ -74,7 +69,6 @@ for (let i = 0; i < paises.length; i++) {
         letras.push(letra);
     }
 }
-
 for (let i = 0; i < letras.length; i++) {
     perguntas.push({
         texto: "A capital do país começa com a letra " + letras[i] + "?",
@@ -84,92 +78,66 @@ for (let i = 0; i < letras.length; i++) {
 }
 
 let indicePergunta = 0;
-
 const pergunta = document.querySelector("#pergunta");
 const sim = document.querySelector("#sim");
 const nao = document.querySelector("#nao");
 const resultado = document.querySelector("#resultado");
 
-// Mostra a primeira pergunta
 function mostrarPergunta() {
-
     if (paisesRestantes.length == 1) {
         pergunta.innerHTML = "O país em que você pensou é:";
         resultado.innerHTML = paisesRestantes[0].nome;
-
         sim.style.display = "none";
         nao.style.display = "none";
-
         return;
     }
 
     if (paisesRestantes.length == 0) {
         pergunta.innerHTML = "Não consegui identificar o país!";
         resultado.innerHTML = "Tente novamente.";
-
         sim.style.display = "none";
         nao.style.display = "none";
-
         return;
     }
 
     if (indicePergunta >= perguntas.length) {
         pergunta.innerHTML = "Não consegui identificar apenas um país.";
-        
         resultado.innerHTML = "Possibilidades: " +
             paisesRestantes.map(p => p.nome).join(", ");
-
         sim.style.display = "none";
         nao.style.display = "none";
-
         return;
     }
-
     pergunta.innerHTML = perguntas[indicePergunta].texto;
 }
 
-// Verifica a resposta do usuário
 function responder(resposta) {
-
     let atual = perguntas[indicePergunta];
-
     paisesRestantes = paisesRestantes.filter(function(pais) {
-
         let corresponde = false;
-
         if (atual.campo == "continente") {
             corresponde = pais.continente == atual.valor;
         }
-
         else if (atual.campo == "idiomas") {
             corresponde = pais.idiomas.includes(atual.valor);
         }
-
         else if (atual.campo == "capital") {
             corresponde = pais.capital.charAt(0).toUpperCase() == atual.valor;
         }
-
         else {
             corresponde = pais[atual.campo] == atual.valor;
         }
-
         return corresponde == resposta;
-
     });
 
     indicePergunta++;
-
     mostrarPergunta();
 }
 
-// Eventos dos botões
 sim.addEventListener("click", function() {
     responder(true);
 });
-
 nao.addEventListener("click", function() {
     responder(false);
 });
-
-// Inicia o jogo
 mostrarPergunta();
