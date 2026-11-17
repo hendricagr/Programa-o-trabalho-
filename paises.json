@@ -1,0 +1,183 @@
+
+[
+    {
+        "nome": "Brasil",
+        "continente": "América do Sul",
+        "idiomas": ["português"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Brasília"
+    },
+    {
+        "nome": "Argentina",
+        "continente": "América do Sul",
+        "idiomas": ["espanhol"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Buenos Aires"
+    },
+    {
+        "nome": "Chile",
+        "continente": "América do Sul",
+        "idiomas": ["espanhol"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Santiago"
+    },
+    {
+        "nome": "México",
+        "continente": "América do Norte",
+        "idiomas": ["espanhol"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Cidade do México"
+    },
+    {
+        "nome": "Canadá",
+        "continente": "América do Norte",
+        "idiomas": ["inglês", "francês"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": true,
+        "capital": "Ottawa"
+    },
+    {
+        "nome": "Estados Unidos",
+        "continente": "América do Norte",
+        "idiomas": ["inglês"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Washington"
+    },
+    {
+        "nome": "Portugal",
+        "continente": "Europa",
+        "idiomas": ["português"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Lisboa"
+    },
+    {
+        "nome": "Espanha",
+        "continente": "Europa",
+        "idiomas": ["espanhol"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": true,
+        "capital": "Madri"
+    },
+    {
+        "nome": "França",
+        "continente": "Europa",
+        "idiomas": ["francês"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Paris"
+    },
+    {
+        "nome": "Alemanha",
+        "continente": "Europa",
+        "idiomas": ["alemão"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Berlim"
+    },
+    {
+        "nome": "Itália",
+        "continente": "Europa",
+        "idiomas": ["italiano"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Roma"
+    },
+    {
+        "nome": "Reino Unido",
+        "continente": "Europa",
+        "idiomas": ["inglês"],
+        "populacao": false,
+        "ilha": true,
+        "monarquia": true,
+        "capital": "Londres"
+    },
+    {
+        "nome": "China",
+        "continente": "Ásia",
+        "idiomas": ["mandarim"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Pequim"
+    },
+    {
+        "nome": "Japão",
+        "continente": "Ásia",
+        "idiomas": ["japonês"],
+        "populacao": true,
+        "ilha": true,
+        "monarquia": true,
+        "capital": "Tóquio"
+    },
+    {
+        "nome": "Índia",
+        "continente": "Ásia",
+        "idiomas": ["hindi", "inglês"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Nova Délhi"
+    },
+    {
+        "nome": "Coreia do Sul",
+        "continente": "Ásia",
+        "idiomas": ["coreano"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Seul"
+    },
+    {
+        "nome": "Tailândia",
+        "continente": "Ásia",
+        "idiomas": ["tailandês"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": true,
+        "capital": "Bangkok"
+    },
+    {
+        "nome": "Indonésia",
+        "continente": "Ásia",
+        "idiomas": ["indonésio"],
+        "populacao": true,
+        "ilha": true,
+        "monarquia": false,
+        "capital": "Jacarta"
+    },
+    {
+        "nome": "Egito",
+        "continente": "África",
+        "idiomas": ["árabe"],
+        "populacao": true,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Cairo"
+    },
+    {
+        "nome": "África do Sul",
+        "continente": "África",
+        "idiomas": ["inglês", "zulu", "africâner"],
+        "populacao": false,
+        "ilha": false,
+        "monarquia": false,
+        "capital": "Pretória"
+    }
+]
