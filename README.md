@@ -6,3 +6,6 @@ O projeto consiste no desenvolvimento de um jogo capaz de adivinhar em qual paí
 Foram cadastrados 20 países diferentes em um arquivo JSON, contendo informações como nome, continente, idiomas, população, característica de ilha, monarquia e capital.
 
 O PHP realiza a leitura do arquivo JSON, enquanto o JavaScript utiliza essas informações para fazer perguntas e eliminar as possibilidades conforme as respostas do usuário, até encontrar o país escolhido. 
+O processo continuara até apenas um país , que será apresentado como resultado.
+
+Objetivos:
