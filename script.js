@@ -65,7 +65,7 @@ let letras = [];
 for (let i = 0; i < paises.length; i++) {
     let letra = paises[i].capital.charAt(0).toUpperCase();
     if (!letras.includes(letra)) {
-        letras.push(letra);
+        letras.push(letra)
     }
 }
 for (let i = 0; i < letras.length; i++) {
