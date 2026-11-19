@@ -1,4 +1,4 @@
-let paisesRestantes = paises.slice();
+let paisesRestantes = paises.slice()
 let perguntas = [
     {
         texto: "O país fica na América do Sul?",
@@ -60,11 +60,10 @@ let perguntas = [
         campo: "monarquia",
         valor: true
     }
-];
+]
 let letras = [];
 for (let i = 0; i < paises.length; i++) {
     let letra = paises[i].capital.charAt(0).toUpperCase();
-
     if (!letras.includes(letra)) {
         letras.push(letra);
     }
@@ -74,70 +73,67 @@ for (let i = 0; i < letras.length; i++) {
         texto: "A capital do país começa com a letra " + letras[i] + "?",
         campo: "capital",
         valor: letras[i]
-    });
+    })
 }
 
-let indicePergunta = 0;
-const pergunta = document.querySelector("#pergunta");
-const sim = document.querySelector("#sim");
-const nao = document.querySelector("#nao");
-const resultado = document.querySelector("#resultado");
+let indicePergunta = 0
+const pergunta = document.querySelector("#pergunta")
+const sim = document.querySelector("#sim")
+const nao = document.querySelector("#nao")
+const resultado = document.querySelector("#resultado")
 
 function mostrarPergunta() {
     if (paisesRestantes.length == 1) {
-        pergunta.innerHTML = "O país em que você pensou é:";
-        resultado.innerHTML = paisesRestantes[0].nome;
-        sim.style.display = "none";
-        nao.style.display = "none";
-        return;
+        pergunta.innerHTML = "O país em que você pensou é:"
+        resultado.innerHTML = paisesRestantes[0].nome
+        sim.style.display = "none"
+        nao.style.display = "none"
+        return
     }
-
     if (paisesRestantes.length == 0) {
-        pergunta.innerHTML = "Não consegui identificar o país!";
-        resultado.innerHTML = "Tente novamente.";
-        sim.style.display = "none";
-        nao.style.display = "none";
-        return;
+        pergunta.innerHTML = "Não consegui identificar o país!"
+        resultado.innerHTML = "Tente novamente."
+        sim.style.display = "none"
+        nao.style.display = "none"
+        return
     }
-
     if (indicePergunta >= perguntas.length) {
-        pergunta.innerHTML = "Não consegui identificar apenas um país.";
+        pergunta.innerHTML = "Não consegui identificar apenas um país."
         resultado.innerHTML = "Possibilidades: " +
-            paisesRestantes.map(p => p.nome).join(", ");
-        sim.style.display = "none";
-        nao.style.display = "none";
-        return;
+            paisesRestantes.map(p => p.nome).join(", ")
+        sim.style.display = "none"
+        nao.style.display = "none"
+        return
     }
-    pergunta.innerHTML = perguntas[indicePergunta].texto;
+    pergunta.innerHTML = perguntas[indicePergunta].texto
 }
 
 function responder(resposta) {
-    let atual = perguntas[indicePergunta];
+    let atual = perguntas[indicePergunta]
     paisesRestantes = paisesRestantes.filter(function(pais) {
-        let corresponde = false;
+        let corresponde = false
         if (atual.campo == "continente") {
-            corresponde = pais.continente == atual.valor;
+            corresponde = pais.continente == atual.valor
         }
         else if (atual.campo == "idiomas") {
-            corresponde = pais.idiomas.includes(atual.valor);
+            corresponde = pais.idiomas.includes(atual.valor)
         }
         else if (atual.campo == "capital") {
-            corresponde = pais.capital.charAt(0).toUpperCase() == atual.valor;
+            corresponde = pais.capital.charAt(0).toUpperCase() == atual.valor
         }
         else {
-            corresponde = pais[atual.campo] == atual.valor;
+            corresponde = pais[atual.campo] == atual.valor
         }
-        return corresponde == resposta;
-    });
-
-    indicePergunta++;
-    mostrarPergunta();
+        return corresponde == resposta
+    })
+    indicePergunta++
+    mostrarPergunta()
 }
 
 sim.addEventListener("click", function() {
-    responder(true);
-});
+    responder(true)
+})
 nao.addEventListener("click", function() {
-    responder(false);
-});
-mostrarPergunta();
+    responder(false)
+})
+mostrarPergunta()
